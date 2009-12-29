@@ -10,13 +10,15 @@
 
 require 'mazes'
 
-class Maze 
+class Maze
+  attr_reader :maze,:startKey,:finishKey,:start,:finish,:coordHash
   def initialize theMaze
     @maze  = theMaze.split("\n")
     @startKey = 'A'
     @finishKey = 'B'
     @start = getPos @startKey
     @finish = getPos @finishKey
+    @coordHash = {@startKey => @start, @finishKey => @finish}
   end
   def solvable?
   end
@@ -26,29 +28,22 @@ class Maze
     line = 0
     @maze.each do |i|
       if i.index(str) != nil
-        return "#{line},#{i.index(str)}"
+        return [line,i.index(str)]
       end
       line += 1
     end
   end
-  def startStop
-    puts "#{@startKey} position is: #{@start.split(',')}"
-    puts "#{@finishKey} position is: #{@finish.split(',')}"
+=begin
+  def getBaseCoords
+    @coordHash
   end
+  def getStartCoord
+    @start
+  end
+  def getFinishCoord
+    @finish
+  end
+=end
 end
 
-m1 = Maze.new(MAZE1)
-m2 = Maze.new(MAZE2)
-m3 = Maze.new(MAZE3)
-
-def doing str
-  puts "------#{str}-----"
-end
-
-doing 'MAZE1'
-m1.startStop
-doing 'MAZE2'
-m2.startStop
-doing 'MAZE3'
-m3.startStop
 
