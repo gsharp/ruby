@@ -33,17 +33,6 @@ class Maze
       line += 1
     end
   end
-=begin
-  def getBaseCoords
-    @coordHash
-  end
-  def getStartCoord
-    @start
-  end
-  def getFinishCoord
-    @finish
-  end
-=end
 end
 
 
