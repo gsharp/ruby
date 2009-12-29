@@ -1,8 +1,20 @@
 Loaded suite ./maze_test
 Started
-......
+PP...P
 
-Finished in 0.003409 seconds.
+  1) Pending: TODO: the solvable? method for bad mazes
+test_bad_mazes(MazeTest)
+./maze_test.rb:27:in `test_bad_mazes'
 
-6 tests, 18 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
-100% passed
+  2) Pending: TODO: the solvable? method
+test_good_mazes(MazeTest)
+./maze_test.rb:21:in `test_good_mazes'
+
+  3) Pending: TODO: the steps method
+test_maze_steps(MazeTest)
+./maze_test.rb:32:in `test_maze_steps'
+
+Finished in 0.004293 seconds.
+
+6 tests, 18 assertions, 0 failures, 0 errors, 3 pendings, 0 omissions, 0 notifications
+50% passed
