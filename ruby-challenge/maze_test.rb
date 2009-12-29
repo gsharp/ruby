@@ -18,18 +18,18 @@ class MazeTest < Test::Unit::TestCase
   M3 = Maze.new(MAZE3)
 
   def test_good_mazes
-    pend('still need to implement the solvable? method')
+    pend('TODO: the solvable? method')
     assert_equal true, M1.solvable?
     assert_equal true, M2.solvable?
   end
 
   def test_bad_mazes
-    pend('yup...still need to do the solvable? method')
+    pend('TODO: the solvable? method for bad mazes')
     assert_equal false, M3.solvable?
   end
 
   def test_maze_steps
-    pend('need to implement steps method')
+    pend('TODO: the steps method')
     assert_equal 44, M1.steps
     assert_equal 75, M2.steps
     assert_equal 0, M3.steps
