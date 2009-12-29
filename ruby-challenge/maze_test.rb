@@ -13,68 +13,74 @@ require 'maze'
 
 
 class MazeTest < Test::Unit::TestCase
+  M1 = Maze.new(MAZE1)
+  M2 = Maze.new(MAZE2)
+  M3 = Maze.new(MAZE3)
+
+=begin
   def test_good_mazes
-    #assert_equal true, Maze.new(MAZE1).solvable?
-    #assert_equal true, Maze.new(MAZE2).solvable?
+    assert_equal true, M1.solvable?
+    assert_equal true, M2.solvable?
   end
 
   def test_bad_mazes
-    #assert_equal false, Maze.new(MAZE3).solvable?
+    assert_equal false, M3.solvable?
   end
 
   def test_maze_steps
-    #assert_equal 44, Maze.new(MAZE1).steps
-    #assert_equal 75, Maze.new(MAZE2).steps
-    #assert_equal 0, Maze.new(MAZE3).steps
+    assert_equal 44, M1.steps
+    assert_equal 75, M2.steps
+    assert_equal 0, M3.steps
   end
-  
-  def test_maze1_contants
-    assert_instance_of Array, Maze.new(MAZE1).maze
+=end
 
-    assert_equal 'A', Maze.new(MAZE1).startKey
-    assert_equal 'B', Maze.new(MAZE1).finishKey
+  def test_maze1_contants
+    assert_instance_of Array, M1.maze
+
+    assert_equal 'A', M1.startKey
+    assert_equal 'B', M1.finishKey
 
     startCoord = [1, 13]
-    assert_equal startCoord, Maze.new(MAZE1).start
+    assert_equal startCoord, M1.start
 
     finishCoord = [7, 23]
-    assert_equal finishCoord, Maze.new(MAZE1).finish
+    assert_equal finishCoord, M1.finish
 
     coords = {"A"=>startCoord, "B"=>finishCoord}
-    assert_equal coords, Maze.new(MAZE1).coordHash
+    assert_equal coords, M1.coordHash
   end
 
   def test_maze2_contants
-    assert_instance_of Array, Maze.new(MAZE2).maze
+    assert_instance_of Array, M2.maze
 
-    assert_equal 'A', Maze.new(MAZE2).startKey
-    assert_equal 'B', Maze.new(MAZE2).finishKey
+    assert_equal 'A', M2.startKey
+    assert_equal 'B', M2.finishKey
 
     startCoord = [4, 7]
-    assert_equal startCoord, Maze.new(MAZE2).start
+    assert_equal startCoord, M2.start
 
     finishCoord = [11, 35]
-    assert_equal finishCoord, Maze.new(MAZE2).finish
+    assert_equal finishCoord, M2.finish
 
     coords = {"A"=>startCoord, "B"=>finishCoord}
-    assert_equal coords, Maze.new(MAZE2).coordHash
+    assert_equal coords, M2.coordHash
 
   end
 
   def test_maze3_contants
-    assert_instance_of Array, Maze.new(MAZE3).maze
+    assert_instance_of Array, M3.maze
 
-    assert_equal 'A', Maze.new(MAZE3).startKey
-    assert_equal 'B', Maze.new(MAZE3).finishKey
+    assert_equal 'A', M3.startKey
+    assert_equal 'B', M3.finishKey
 
     startCoord = [5, 15]
-    assert_equal startCoord, Maze.new(MAZE3).start
+    assert_equal startCoord, M3.start
 
     finishCoord = [9, 17]
-    assert_equal finishCoord, Maze.new(MAZE3).finish
+    assert_equal finishCoord, M3.finish
 
     coords = {"A"=>startCoord, "B"=>finishCoord}
-    assert_equal coords, Maze.new(MAZE3).coordHash
+    assert_equal coords, M3.coordHash
   end
 
 end
