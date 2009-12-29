@@ -21,8 +21,10 @@ class Maze
     @coordHash = {@startKey => @start, @finishKey => @finish}
   end
   def solvable?
+    # todo
   end
   def steps
+    # todo
   end
   def getPos str
     line = 0
