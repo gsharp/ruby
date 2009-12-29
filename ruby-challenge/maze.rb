@@ -13,20 +13,27 @@ require 'mazes'
 class Maze 
   def initialize theMaze
     @maze  = theMaze.split("\n")
+    @startKey = 'A'
+    @finishKey = 'B'
+    @start = getPos @startKey
+    @finish = getPos @finishKey
   end
   def solvable?
   end
   def steps
   end
   def getPos str
-    line = 1
-    index = nil
+    line = 0
     @maze.each do |i|
       if i.index(str) != nil
-        puts "Found #{str} on line #{line}, column #{i.index(str)}"
+        return "#{line},#{i.index(str)}"
       end
       line += 1
     end
+  end
+  def startStop
+    puts "#{@startKey} position is: #{@start.split(',')}"
+    puts "#{@finishKey} position is: #{@finish.split(',')}"
   end
 end
 
@@ -39,11 +46,9 @@ def doing str
 end
 
 doing 'MAZE1'
-m1.getPos('A')
-m1.getPos('B')
+m1.startStop
 doing 'MAZE2'
-m2.getPos('A')
-m2.getPos('B')
+m2.startStop
 doing 'MAZE3'
-m3.getPos('A')
-m3.getPos('B')
+m3.startStop
+
