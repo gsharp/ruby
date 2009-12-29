@@ -1,4 +1,5 @@
-# 
+#!/usr/local/bin/ruby1.9 -w
+#  
 #  maze.rb
 #  ruby challenge for rubylearning.com
 #  
