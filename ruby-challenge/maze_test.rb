@@ -17,23 +17,24 @@ class MazeTest < Test::Unit::TestCase
   M2 = Maze.new(MAZE2)
   M3 = Maze.new(MAZE3)
 
-=begin
   def test_good_mazes
+    pend('still need to implement the solvable? method')
     assert_equal true, M1.solvable?
     assert_equal true, M2.solvable?
   end
 
   def test_bad_mazes
+    pend('yup...still need to do the solvable? method')
     assert_equal false, M3.solvable?
   end
 
   def test_maze_steps
+    pend('need to implement steps method')
     assert_equal 44, M1.steps
     assert_equal 75, M2.steps
     assert_equal 0, M3.steps
   end
-=end
-
+  
   def test_maze1_contants
     assert_instance_of Array, M1.maze
 
